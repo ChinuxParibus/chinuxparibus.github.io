@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+  >
+  <title>Big Thing Coming... 🥑</title>
+</head>
+<body>
+  <section class="hero is-light is-fullheight mt-0">
+    <div class="hero-body is-flex is-flex-direction-column">
+      <div class="has-text-centered">
+        <img src="./avatar-cat.gif" width="150" alt="">
+      </div>
+      <h1 class="title" style="color:#558303;">
+        Hola 👋🏼
+      </h1>
+      <h2 class="subtitle mb-1">La magia se está <b>(re)</b>construyendo</h2>
+      <p class="is-7">Acá no hay nada por el momento... </p>
+      <p>...mientras tanto puedes entretenerte actualizando la página 😉</p>
+      <div x-data="messages()" class="mt-1">
+        <div class="box content">
+          <p x-text="selectMessage()"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./alpine.min.js"></script>
+  <script>
+    const messages = () => ({
+      msgs: [
+        "Valar Morghulis",
+        "C:\\> ▮",
+        "... 🤔",
+        "#allyourbasearebelongtous",
+        "🥑...?",
+        "#OMG",
+        "ようこそ！",
+        "Ningún pixel fue dañado",
+        "\"The cake is a lie\"",
+        "☕ ¿Café o Chocolate? 🍫",
+        "Compilando portfolio.exe.",
+        "El hoyo ... del conejo 😏",
+        "I read the console, Dan",
+        "keep going, please.",
+        "Always :3",
+        "Have a Nice Day!",
+        " :V ",
+        "sudo rm -rf /",
+        " ;) ",
+        "Este espacio no está patrocinado"
+      ],
+      selectMessage() {
+        const i = Math.floor(Math.random() * this.msgs.length)
+        console.log(i)
+        return this.msgs[i]
+      }
+    })
+  </script>
+</body>
+</html>
